@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iphone-color-pages"
+version = "0.1.0"
+description = "Plan and verify color-grouped iPhone Home Screens over USB with Apple Configurator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "wzxsph"}]
+dependencies = ["Pillow>=10"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Repository = "https://github.com/wzxsph/iphone-color-pages"
+Issues = "https://github.com/wzxsph/iphone-color-pages/issues"
+
+[project.scripts]
+iphone-color-pages = "iphone_color_pages.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
